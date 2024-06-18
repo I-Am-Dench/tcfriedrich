@@ -1,0 +1,134 @@
+:root {
+    --background: #2A2E36;
+    --foreground: #F2F4F3;
+    --section-bg: #60B0C820;
+    --link-fg: #60B0C8;
+
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+section > :nth-child(n+2),
+section > div > :nth-child(n+2) {
+    margin-top: 0.5rem
+}
+
+section ul li ~ li {
+    margin-top: 0.5rem;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: var(--link-fg);   
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: inline-block;
+    position: relative;
+    border-bottom: var(--link-fg) 2px solid;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: var(--link-fg);
+}
+
+nav a::before {
+    z-index: -1;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff2;
+    width: 100%;
+    height: 0;
+    transition: height 100ms;
+}
+
+nav a:hover::before {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: var(--section-bg);
+    flex: 1;
+}
+
+section ul {
+    margin-left: 1rem;
+}
+
+#about-me {
+    display: flex;
+}
+
+#me {
+    --size: 256px;
+
+    object-fit: cover;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    margin: 0 0.5rem;
+}
+
+.index {
+    display: flex;
+}
+
+.gh-link {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    border-radius: 0.2rem;
+    background-color: var(--link-fg);
+}
+
+.gh-link::before {
+    content: '';
+    background: url("/public/images/github-mark-white.svg") no-repeat;
+    background-size: contain;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

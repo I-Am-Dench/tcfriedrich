@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/public/styles/main.css">
+        <link rel="stylesheet" href="/public/styles/projects.css">
+
+        <title>6502 Emulator</title>
+    </head>
+    <body>
+        <header>
+            <h1>6502 Emulator</h1>
+            <nav>
+                <ul>
+                    <li><a href="/projects/">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Summary</h2>
+                <p>This is an emulator core of the <a href="https://en.wikipedia.org/wiki/MOS_Technology_6502">MOS 6502 Processor</a> implemented as microcode state machine.
+                Initially, I wanted to use the original microcodes from the actual 6502, and in doing so, I stumbled upon the <a href="https://c74project.com/">C74-6502 Project</a> 
+                (A modern recreation of the processor) which detailed their own microcodes. This unintentionally turned this project into an emulator for the C74-6502, but I am still 
+                happy with the outcome nontheless.</p>
+                <p>The emulator works well, but it is missing Decimal Mode and proper unit tests for certain scenarios (i.e. branching on page boundaries).</p>
+                <a class="gh-link" href="https://github.com/I-Am-Dench/6502Emulator" target="_blank" rel="noreferrer noopener">Source Code</a>
+            </section>
+        </main>
+    </body>
+</html>
