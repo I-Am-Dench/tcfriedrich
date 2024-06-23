@@ -22,7 +22,45 @@
         <main>
             <section>
                 <h2>Summary</h2>
-                <p></p>
+                <p>This is a very early, and undocumented, project I made which is effectively my own version of <a href="https://www.gnu.org/software/make/">Make</a> or <a href="https://cmake.org/">CMake</a>. This was written as a minimalist Python script for building C/C++ projects when I was just starting to learn the languages.</p>
+                <a class="gh-link" href="https://github.com/I-Am-Dench/BuildMeC" target="_blank" rel="noreferrer noopener">Source Code</a>
+                <hr/>
+                <h2>Documentation</h2>
+                <h3>Command</h3>
+                <p>Usage: <code>buildmec.py [-h] [-v] [-i [{cpp,c}]] [-c] [-r [RUN ...]]</code></p>
+                <h4>Options</h4>
+                <table class="options-help">
+                    <tbody>
+                        <tr>
+                            <td><code>-h, --help</code></td>
+                            <td><p>Shows the program's help messages and exits.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>-v, --version</code></td>
+                            <td><p>Displays the current version of Build-Me-C.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>-i, --init</code></td>
+                            <td><p>
+                                Creates the buildmec.json config file and generates starter for either C or C++ depending on the supplied toolchain argument.
+                                If this option is set when a buildmec.json file already exists, the command will prompt to user if they would like to regenerate the config. Default toolchain: cpp
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td><code>-c, --compile</code></td>
+                            <td><p>
+                                Compiles the project using the buildmec.json configuration. Object files are compiled in the directory specified by the configured <code>obj-path</code> and the fully linked binary is placed in the directory specified by the configured <code>bin-path</code>.
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td><code>-r, --run</code></td>
+                            <td><p>
+                                Runs the fully compiled and linked binary specified by the path created by combining the configured <code>bin-path</code> and <code>FINAL</code>. All argumented provided after this option will be supplied as command-line argument for the target program.
+                                This options is typically used in conjunction with the <code>-c</code> option to compile and then run the program. This should be the last option provided.
+                            </p></td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </main>
     </body>

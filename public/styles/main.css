@@ -2,6 +2,7 @@
     --background: #2A2E36;
     --foreground: #F2F4F3;
     --section-bg: #60B0C820;
+    --caption-bg: #253845;
     --link-fg: #60B0C8;
 
     color: var(--foreground);
@@ -20,7 +21,7 @@ body {
 
 section > :nth-child(n+2),
 section > div > :nth-child(n+2) {
-    margin-top: 0.5rem
+    margin-top: 1rem
 }
 
 section ul li ~ li {
@@ -88,8 +89,38 @@ section ul {
     margin-left: 1rem;
 }
 
+figure {
+    display: flex;
+    width: 100%;
+}
+
+figure img {
+    max-width: 60%;
+}
+
+figcaption {
+    margin: 5rem 0;
+    padding: 1rem;
+    background-color: var(--caption-bg);
+    height: fit-content;
+}
+
+code {
+    display: inline-block;
+    background-color: var(--caption-bg);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--background);
+}
+
 #about-me {
     display: flex;
+    flex: 3;
 }
 
 #me {
@@ -131,4 +162,42 @@ section ul {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .index {
+        display: block;
+    }
+    
+    #about-me {
+        flex-direction: column;
+    }
+
+    #me {
+        margin: 1rem auto;
+    }
+
+    section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    figure {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-direction: column;
+    }
 }

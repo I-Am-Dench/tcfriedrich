@@ -1,0 +1,12 @@
+.options-help {
+    border-spacing: 1rem;
+}
+
+.options-help td {
+    vertical-align: top;
+}
+
+.options-help td:first-child {
+    max-width: 100%;
+    white-space: nowrap;
+}
