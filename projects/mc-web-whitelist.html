@@ -22,7 +22,29 @@
         <main>
             <section>
                 <h2>Summary</h2>
-                <p></p>
+                <p>This is a simple plugin that allows you to whitelist players onto your Minecraft server through HTTP requests. While some plugins similar to this
+                include a frontend to their authentication, this plugin's goal was just to offer an interface to whitelisting. This means that to fully utilize the plugin,
+                you will need to write your own web server to effectively act as a proxy between your players and the Minecraft server itself. This plugin may not be for everyone,
+                but for people like me who need a backend to interface with their custom frontend, this would be the right pick. For me, I needed this to authenticate player's Minecraft
+                accounts on my website <a href="/projects/theoscrib.html">Theo's Crib</a>.</p>
+
+                <a class="gh-link" href="https://github.com/I-Am-Dench/MCWebWhitelist" target="_blank" rel="noreferrer noopener">Source Code</a>
+                <hr/>
+
+                <h2>Auth Code</h2>
+                <p>In order to authenticate that a player owns a specific Minecraft account without having to use Microsoft's API, many servers, and this plugin, have the authenticating player
+                request to be whitelisted on their website. The website sends a the player's username to the Minecraft server to generate an authentication code. The player is then directed to log into
+                the Minecraft server. Upon doing so, the player is kicked, but with an authentication code as the reason for being kicked. The player then enters this code on the original website,
+                authenticating that the player does in fact own the specified Minecraft account.</p>
+                <p>Details on this plugin's API can be found in the <a href="https://github.com/I-Am-Dench/MCWebWhitelist/blob/main/README.md">README.md</a> of the source code.</p>
+
+                <figure>
+                    <img src="/public/images/projects/minecraft_auth_code.jpg" alt="A Minecraft window with text saying: Failed to connect to the server. Below, it says: Your link code is: H5pBAsTX">
+                    <figcaption>
+                        <p>This is an image of what the player will see when they try joining the server after requesting an authentication code. The player is kicked from the server with the reason
+                        being the message shown in the image.</p>
+                    </figcaption>
+                </figure>
             </section>
         </main>
     </body>
