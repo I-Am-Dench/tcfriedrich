@@ -92,6 +92,7 @@ section ul {
 figure {
     display: flex;
     width: 100%;
+    gap: 1rem;
 }
 
 figure img {
@@ -104,6 +105,10 @@ figcaption {
     background-color: var(--caption-bg);
     align-self: center;
     /* height: fit-content; */
+}
+
+figcaption > * ~ * {
+    margin-top: 0.5rem;
 }
 
 code {

@@ -22,7 +22,37 @@
         <main>
             <section>
                 <h2>Summary</h2>
-                <p></p>
+                <p>The Nimbus Launcher helps players to quickly add, swap, and run variable client configurations for the game <a href="https://en.wikipedia.org/wiki/Lego_Universe">LEGO® Universe</a>,
+                which was discontinued as of January 2012. After the release of <a href="https://github.com/DarkflameUniverse/DarkflameServer">Darkflame Universe</a>, a reversed-engineered server emulator,
+                fans of the game could now set up their own servers and play a near 1-to-1 accurate experience of the game when it was live.</p>
+                <p>As it would go against the LEGO Group's wishes of not allowing public servers, the launcher is NOT a server browser and only offers a convenient way of exporting, importing, and running
+                client configurations. For example, switching between a localhosted server vs. a friend's server.</p>
+
+                <p>Although the application does work on all devices, the launcher currently only supports starting the game on Windows.</p>
+                
+                <a class="gh-link" href="https://github.com/I-Am-Dench/nimbus-launcher" target="_blank" rel="noreferrer noopener">Source Code</a>
+                <hr/>
+
+                <h2>Main Window</h2>
+                <figure>
+                    <img class="window-screenshot" src="/public/images/projects/nimbus-launcher.jpg" alt="An open window that says Launch LEGO Universe with a dropdown saying Localhost below it. Below the dropdown is a list of information for the selected server such as the Server Name, Server IP, and Locale. There is a play button on the bottom right.">
+                    <figcaption>
+                        <p>This is the main Nimbus Launcher window. From here, players can use the drop down to select between their configurations.
+                        Clicking the Play button will move over and update any patched resources (more on patching here: <a href="https://github.com/I-Am-Dench/nimbus-launcher/blob/main/PATCHING.md">PATCHING.md</a>),
+                        update the client's boot.cfg file, and then run the game. Clicking the gear icon will open the Settings window.</p>
+                    </figcaption>
+                </figure>
+
+                <h2>Settings Window</h2>
+                <figure>
+                    <img class="window-screenshot" src="/public/images/projects/nimbus-launcher_settings.jpg" alt="">
+                    <figcaption>
+                        <p>This is an example of the Settings window. Players can add, edit, and remove configurations from here. The Launcher tab (not picture), allows the user to configure the filepath
+                        to their client, the name of the executable, and toggle some extra launcher settings: Close Launcher When Played, Check Patches Automatically, etc.</p>
+                        <p>When editing a configuration, players have the option of exporting their config into an XML file.
+                        This file can then be sent to friends who can then import it to automatically add the configuration to their launcher.</p>
+                    </figcaption>
+                </figure>
             </section>
         </main>
     </body>
