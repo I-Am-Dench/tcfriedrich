@@ -10,3 +10,7 @@
     max-width: 100%;
     white-space: nowrap;
 }
+
+li a {
+    font-size: 18px;
+}
