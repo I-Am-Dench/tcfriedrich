@@ -110,7 +110,7 @@ code {
     display: inline-block;
     background-color: var(--caption-bg);
     border-radius: 0.2rem;
-    padding: 0.5rem;
+    padding: 0.3rem 0.5rem;
     font-size: 16px;
 }
 
@@ -169,6 +169,19 @@ hr {
     margin: 0;
 }
 
+.code-example {
+    display: flex;
+    gap: 1rem;
+}
+
+.code-example aside {
+    margin-top: 0;
+}
+
+.code-example aside > * ~ * {
+    margin-top: 1rem;
+}
+
 @media screen and (max-width: 900px) {
     .index {
         display: block;
@@ -198,6 +211,14 @@ hr {
 
     figcaption {
         margin: 0;
+    }
+
+    pre code {
+        display: block;
+    }
+
+    .code-example {
+        flex-direction: column;
     }
 }
 

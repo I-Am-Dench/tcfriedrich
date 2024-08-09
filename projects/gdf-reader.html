@@ -22,7 +22,53 @@
         <main>
             <section>
                 <h2>Summary</h2>
-                <p></p>
+                <p>This is a small file parser made for reading key-value pairs similar to that of a <a href="https://toml.io/en/">TOML</a> file. This was initially created for storing game data while creating text based games, 
+                but it can also be used for any other type of data storage. This parser, and schema, is not particularly robust specifically when it comes to storing strings, but it's main features is its compatibility with parsing out enums, 
+                which can be achieved by making the enum types implement the <code>GDFCompatible</code> interface.</p>
+                <a class="gh-link" href="https://github.com/I-Am-Dench/GDFReader" target="_blank" rel="noreferrer noopener">Source Code</a>
+                <hr/>
+
+                <h2>Examples</h2>
+
+                <h3>Data Types</h3>
+                <div class="code-example">
+<pre><code>&lt;data&gt;
+:x = 1
+:y = 5
+:str = Hello_World!
+:allow = +
+:ele = fire
+</code></pre>
+                    <aside>
+                        <p>This example demonstrates how data is stored within the gdf file. The <code>data</code> tag, contains 5 fields:
+                        <code>x</code>, <code>y</code>, <code>str</code>, <code>allow</code>, and <code>ele</code>. Traditionally,
+                        fields <code>x</code> and <code>y</code> would contain an integer and <code>str</code>, <code>allow</code>, and <code>ele</code>
+                        contains a string. Of course, by specification, <code>allow</code> should be accessed as a boolean with '+' and '-' being
+                        respective analogs for 'true' and 'false.' And, out of convenience, <code>ele</code> can be interpreted as an enum value.
+                        In this case, the possible values may be <code>earth</code>, <code>water</code>, <code>fire</code>, or <code>air</code>.</p>
+                        <p>Due to the simplicity of the parser, there is no way of determining the literal value of each field.
+                        The <code>x</code> field could be interpreted as either a string, integer, or floating point number. The type of
+                        data read out of the file is up to the calling code.</p>
+                    </aside>
+                </div>
+
+                <h3>Player Classes</h3>
+                <div class="code-example">
+<pre><code>&lt;knight&gt;
+:health = 100
+:strength = 10
+:attack_type = melee
+
+&lt;wizard&gt;
+:health = 80
+:strength = 5
+:attack_type = magic
+</code></pre>
+                    <aside>
+                        <p>This example demonstrates how this data might be used within a game. Each character class
+                        has a default <code>health</code> and <code>strength</code> field and an enum <code>attack_type</code>.</p>
+                    </aside>
+                </div>
             </section>
         </main>
     </body>
