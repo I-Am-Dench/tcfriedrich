@@ -91,6 +91,8 @@ section ul {
 
 figure {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     gap: 1rem;
 }
@@ -100,11 +102,10 @@ figure img {
 }
 
 figcaption {
-    margin: 5rem 0;
+    margin: 0 10rem;
     padding: 1rem;
     background-color: var(--caption-bg);
     align-self: center;
-    /* height: fit-content; */
 }
 
 figcaption > * ~ * {
@@ -203,11 +204,6 @@ hr {
     section {
         margin-left: 0;
         margin-right: 0;
-    }
-
-    figure {
-        flex-direction: column;
-        align-items: center;
     }
 
     figure img {
