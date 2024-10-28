@@ -144,6 +144,14 @@ hr {
     display: flex;
 }
 
+.degree span {
+    font-size: 16px;
+}
+
+.degree p ~ p {
+    margin-left: 1rem;
+}
+
 .gh-link {
     display: flex;
     padding: 0.5rem;
